@@ -261,7 +261,7 @@ module AuthorizeNet
     def prior_auth_capture(transaction, amount = nil)
       handle_transaction_argument(transaction)
       set_fields(:amount => amount)
-      set_fields(:invoice_number => "8675309")
+      set_fields(:invoiceNumber => "8675309")
       self.type = Type::PRIOR_AUTHORIZATION_AND_CAPTURE
       run
     end
